@@ -56,6 +56,7 @@ class File:
 def part_one():
     terminal_output = generate_list()
     dir_list = []
+    pass
 
 
 def part_two():
