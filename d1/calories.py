@@ -10,7 +10,7 @@ def generate_list():
     return elf_list
 
 
-def part_one():    
+def part_one():
     most_calories = 0
     elf_list = generate_list()
 
