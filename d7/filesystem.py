@@ -2,7 +2,7 @@ FILENAME = "test.input"
 
 def generate_list():
     with open(FILENAME, "rt", encoding="ascii") as input_file:
-        reader = input_file.read().split("\n")
+        reader = input_file.read().split("$")
         return reader
 
 
@@ -53,11 +53,19 @@ class File:
         return self.size
 
 
+class Shell:
+    curr_dir: str
+    stdin: str
+    stdout: str
+
+    def __init__(self) -> None:
+        self.curr_dir = "/"
+
+
 def part_one():
     terminal_output = generate_list()
     dir_list = []
-    pass
-
+    print(terminal_output)
 
 def part_two():
     pass
