@@ -10,7 +10,6 @@ Task: After the rearrangement procedure completes, what crate ends up on top of 
 Example Input:
 
 ---
-
 Original Configuration:
 ```
     [D]    
