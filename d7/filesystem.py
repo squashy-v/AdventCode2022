@@ -2,7 +2,7 @@ FILENAME = "test.input"
 
 def generate_list():
     with open(FILENAME, "rt", encoding="ascii") as input_file:
-        reader = input_file.read().split("$")
+        reader = input_file.read().split("\n")
         return reader
 
 
@@ -24,7 +24,7 @@ class Directory:
 
     def calc_size(self) -> int:
         size = 0
-        if (len(self.contents) <= 1):
+        if (len(self.contents) < 1):
             self.size = size
             return size
         else:
@@ -53,23 +53,14 @@ class File:
         return self.size
 
 
-class Shell:
-    curr_dir: str
-    stdin: str
-    stdout: str
-
-    def __init__(self) -> None:
-        self.curr_dir = "/"
-
-
 def part_one():
     terminal_output = generate_list()
-    dir_list = []
     print(terminal_output)
+
 
 def part_two():
     pass
-
+   
 
 if __name__ == "__main__":
     part_one()

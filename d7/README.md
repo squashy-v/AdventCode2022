@@ -9,6 +9,7 @@ Task: Find all of the directories with a total size of at most 100000. What is t
 
 Example Input:
 
+---
 ```
 ---
 $ cd /
@@ -37,3 +38,6 @@ $ ls
 ```
 ---
 
+Made a file class to store file names, and their sizes. Made a directory class to store file objects, and recursively calculate their size based on the size of their inner objects.
+
+### Part 2
