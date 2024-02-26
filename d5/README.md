@@ -6,6 +6,9 @@ https://adventofcode.com/2022/day/5
 ### Part 1
 Task: After the rearrangement procedure completes, what crate ends up on top of each stack?
 
+-Each column is a stack of crates
+-Each instruction moves one crate at a time from the old stack to the new one
+
 
 Example Input:
 
@@ -44,5 +47,8 @@ Original Configuration
 
 
  ### Part 2
+Task: After the rearrangement procedure completes, what crate ends up on top of each stack?
+
+-Now multiple cranes can be moved at once
 
  Even though the crates aren't always moved in FILO anymore, making a new move_crates function that moves each group of crates in FIFO (just stored them in an array and move out of that array in reverse order), but still treats each new instruction as FILO like the old code does. Allows for moving groups of crates within an instruction to be FIFO, but the instructions over all to be FILO.
