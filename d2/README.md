@@ -6,10 +6,10 @@ https://adventofcode.com/2022/day/2
 ### Part 1
 Task: What would your total score be if everything goes exactly according to your strategy guide?
 
--First column, A = rock, B = paper, C = scisors
--Second column, X = rock, Y = paper, Z = scisors
--1pt for rock, 2 for paper, 3 for scisors
--0pt for loss, 3 for tie, 6 for win
+- First column, A = rock, B = paper, C = scisors  
+- Second column, X = rock, Y = paper, Z = scisors  
+- 1pt for rock, 2 for paper, 3 for scisors  
+- 0pt for loss, 3 for tie, 6 for win  
 
 Example Input:
 
@@ -29,7 +29,7 @@ Tweaked the list generation from day 1 to generate a list of rounds. Wrote a det
 ## Part 2
 Task: Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?
 
--Second column, X = lose, Y = draw, Z = win
+- Second column, X = lose, Y = draw, Z = win  
 
 Wrote new function brute force map each old symbol to the new one based on new instructions. Passed new list into old functions to solve.
 
