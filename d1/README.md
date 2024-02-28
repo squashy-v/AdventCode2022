@@ -6,8 +6,8 @@ https://adventofcode.com/2022/day/1
 ### Part 1
 Task: Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 
-- Each line is a snack that an elf is holding
-- New lines indicate a new elf is writing
+- Each line is a snack that an elf is holding  
+- New lines indicate a new elf is writing  
 
 
 Example Input:
