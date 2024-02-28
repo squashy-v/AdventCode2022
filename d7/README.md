@@ -6,10 +6,10 @@ https://adventofcode.com/2022/day/7
 ### Part 1
 Task: Find all of the directories with a total size of at most 100000. What is the sum of the total sizes of those directories?
 
--Filesystem mirrors linux filesytem with / being the root
--cd = change directory
--ls = list stuff
--Directories do not have any inherient size
+- Filesystem mirrors linux filesytem with / being the root  
+- cd = change directory  
+- ls = list stuff  
+- Directories do not have any inherient size  
 
 
 Example Input:
@@ -48,7 +48,7 @@ Read from file, generating list of commands, and removed each ls command. Made a
 ### Part 2
 Task: Find the smallest directory that, if deleted, would free up enough space on the filesystem to run the update. What is the total size of that directory?
 
--Filesystem is 70000000 bytes big
--The update takes 30000000 bytes
+- Filesystem is 70000000 bytes big  
+- The update takes 30000000 bytes  
 
 Calculated the size needed to update, found all the directories bigger than that with dir_over_value, and then looped through targets to find the smallest one and print its size.
