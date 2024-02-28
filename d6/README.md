@@ -6,7 +6,7 @@ https://adventofcode.com/2022/day/6
 ### Part 1
 Task: How many characters need to be processed before the first start-of-packet marker is detected?
 
--start-of-packet marker is 4 non-repeating characters in a row
+- start-of-packet marker is 4 non-repeating characters in a row  
 
 
 Example Input:
@@ -24,6 +24,6 @@ Grab the entire string from the input file and loop through its index, adding th
 ### Part 2
 Task: How many characters need to be processed before the first start-of-message marker is detected?
 
--Now looking for 13 non-repeating characters in a row
+- Now looking for 13 non-repeating characters in a row  
 
 Just increased the size of the list containing recent characters to 13.
