@@ -6,6 +6,11 @@ https://adventofcode.com/2022/day/7
 ### Part 1
 Task: Find all of the directories with a total size of at most 100000. What is the sum of the total sizes of those directories?
 
+-Filesystem mirrors linux filesytem with / being the root
+-cd = change directory
+-ls = list stuff
+-Directories do not have any inherient size
+
 
 Example Input:
 
