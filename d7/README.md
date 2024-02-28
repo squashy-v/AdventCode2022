@@ -16,7 +16,6 @@ Example Input:
 
 ---
 ```
----
 $ cd /
 $ ls
 dir a
