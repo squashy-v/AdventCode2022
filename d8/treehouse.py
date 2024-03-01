@@ -36,7 +36,22 @@ def tallest_tree(tree: int, row: list, index: int) -> bool:
 def calc_view(tree: int, row: list, index: int) -> int:
     first_half: list = row[:index]
     second_half: list = row[index+1:]
-    return 0
+    count_one = 0
+    for x in first_half[::-1]:
+        if tree > x:
+            count_one += 1
+        elif tree <= x:
+            count_one += 1
+            break
+    count_two = 0
+    for x in second_half:
+        if tree > x:
+            count_two += 1
+        elif tree <= x:
+            count_two += 1
+            break
+
+    return (count_one * count_two)
 
 
 def part_one() -> None:

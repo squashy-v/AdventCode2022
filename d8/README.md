@@ -35,4 +35,4 @@ Task: What is the highest scenic score possible for any tree?
 - Edge trees have 0 visable trees in that direction  
 - Trees of same hight block the view  
 
-Blah
+Wrote a calc_view function that splits a row in half and checks how many trees on each side are visable and then multiplies them together and returns the value. Used the same loop as before and then ran the row and column through the calc_view function seperately and then multiplied them together after return and if its bigger than the current biggest view replace it.
