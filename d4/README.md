@@ -27,7 +27,6 @@ Example Input:
 After some dirty looping through the list of data eventually created a 2d list that contains a list of each pairing of elf's assignments and the pairings in format `[[2,4],[6,8]]`. Defined a function to check if a list contained another and wrote a for loop to count how many time the function returned true, and had to pass each pair in twice, to compensate for the fact that the second assignment can contain the first as well.
 
 
-
 ### Part 2
 Task: In how many assignment pairs do the ranges overlap?
 
