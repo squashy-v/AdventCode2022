@@ -1,25 +1,33 @@
 #!/usr/bin/env python
 FILENAME = "rps.input"
 
-def generate_list():
+
+def generate_list() -> list:
     with open(FILENAME, "rt", encoding="ascii") as input_file:
         reader = input_file.read().split("\n")
-        round_list = []
+        round_list: list = []
         for x in reader:
             round_list.append(x.split(" "))
     return round_list
 
 
 def determine_round(round: list) -> int:
-    if ((round[0] == "A" and round[1] == "Y") or (round[0] == "B" and round[1] == "Z") or (round[0] == "C" and round[1] == "X")):
+    if ((round[0] == "A" and round[1] == "Y") or
+            (round[0] == "B" and round[1] == "Z") or
+            (round[0] == "C" and round[1] == "X")):
         return 6
-    elif ((round[0] == "A" and round[1] == "Z") or (round[0] == "B" and round[1] == "X") or (round[0] == "C" and round[1] == "Y")):
+    elif ((round[0] == "A" and round[1] == "Z") or
+            (round[0] == "B" and round[1] == "X") or
+            (round[0] == "C" and round[1] == "Y")):
         return 0
-    elif ((round[0] == "A" and round[1] == "X") or (round[0] == "B" and round[1] == "Y") or (round[0] == "C" and round[1] == "Z")):
+    elif ((round[0] == "A" and round[1] == "X") or
+            (round[0] == "B" and round[1] == "Y") or
+            (round[0] == "C" and round[1] == "Z")):
         return 3
 
+
 def determine_score(round: list) -> int:
-    sum = determine_round(round)
+    sum: int = determine_round(round)
     if round[1] == "X":
         sum += 1
     if round[1] == "Y":
@@ -28,6 +36,7 @@ def determine_score(round: list) -> int:
         sum += 3
     return sum
 
+
 def get_symbol(round: list) -> str:
     if (round[1] == "X"):
         if round[0] == "A":
@@ -35,7 +44,7 @@ def get_symbol(round: list) -> str:
         if round[0] == "B":
             return "X"
         if round[0] == "C":
-            return  "Y"
+            return "Y"
     elif (round[1] == "Y"):
         if round[0] == "A":
             return "X"
@@ -52,14 +61,14 @@ def get_symbol(round: list) -> str:
             return "X"
 
 
-def part_one():
-    stratagy = generate_list()
-    score_list = map(determine_score, stratagy)
+def part_one() -> None:
+    stratagy: list = generate_list()
+    score_list: map = map(determine_score, stratagy)
     print(sum(score_list))
 
 
-def part_two():
-    stratagy = generate_list()
+def part_two() -> None:
+    stratagy: list = generate_list()
     for x in stratagy:
         x[1] = get_symbol(x)
     score_list = map(determine_score, stratagy)
