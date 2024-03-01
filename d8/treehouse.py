@@ -5,7 +5,7 @@ FILENAME: str = "treehouse.input"
 def generate_forest() -> list:
     with open(FILENAME, "rt") as file:
         reader = file.read().splitlines()
-        reader = list(map(list, reader))
+        reader: list = list(map(list, reader))
     return reader
 
 
@@ -36,14 +36,14 @@ def tallest_tree(tree: int, row: list, index: int) -> bool:
 def calc_view(tree: int, row: list, index: int) -> int:
     first_half: list = row[:index]
     second_half: list = row[index+1:]
-    count_one = 0
+    count_one: int = 0
     for x in first_half[::-1]:
         if tree > x:
             count_one += 1
         elif tree <= x:
             count_one += 1
             break
-    count_two = 0
+    count_two: int = 0
     for x in second_half:
         if tree > x:
             count_two += 1
