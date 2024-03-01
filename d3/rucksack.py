@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from string import ascii_letters
 FILENAME = "rucksack.input"
 PRIODICT = list(enumerate(ascii_letters, 1))
