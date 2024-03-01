@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 FILENAME = "cleanup.input"
 
 def generate_list():
