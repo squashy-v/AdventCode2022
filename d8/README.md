@@ -11,6 +11,7 @@ Task: How many trees are visible from outside the grid?
 - A tree can be seen if all the trees between it and the border on anyside are shorter than it  
 - All the trees on the border can be seen  
 
+
 Example Input:
 
 ---
