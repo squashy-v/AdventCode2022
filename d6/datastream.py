@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 FILENAME: str = "datastream.input"
 
+
 def generate_datastream() -> str:
     with open(FILENAME, "rt", encoding="ascii") as input_file:
-            reader = input_file.read().strip()
+        reader = input_file.read().strip()
     return reader
+
 
 def any_dupes(packet: list) -> bool:
     for x in packet:
@@ -13,7 +15,8 @@ def any_dupes(packet: list) -> bool:
     else:
         return False
 
-def part_one():
+
+def part_one() -> None:
     datastream: str = generate_datastream()
     curr_packet: list = []
     packet_start: int = 0
@@ -26,10 +29,11 @@ def part_one():
             if not any_dupes(curr_packet):
                 packet_start = i + 1
                 break
+
     print(curr_packet, packet_start)
 
 
-def part_two():
+def part_two() -> None:
     datastream: str = generate_datastream()
     curr_packet: list = []
     packet_start: int = 0
@@ -42,8 +46,8 @@ def part_two():
             if not any_dupes(curr_packet):
                 packet_start = i + 1
                 break
-    print(curr_packet, packet_start)
 
+    print(curr_packet, packet_start)
 
 
 if __name__ == "__main__":
