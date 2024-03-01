@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 FILENAME = "rps.input"
 
 def generate_list():
