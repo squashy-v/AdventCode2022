@@ -1,10 +1,11 @@
 #!/usr/bin/env python
-FILENAME = "cleanup.input"
+FILENAME: str = "cleanup.input"
 
-def generate_list():
+
+def generate_list() -> list:
     with open(FILENAME, "rt", encoding="ascii") as input_file:
         reader = input_file.read().split("\n")
-        elf_assignment = [x.split(',') for x in reader]
+        elf_assignment: list = [x.split(',') for x in reader]
         for x in elf_assignment:
             for i in range(len(x)):
                 x[i] = x[i].split("-")
@@ -26,10 +27,10 @@ def any_contain(x: list, y:list) -> bool:
         return False
 
 
-def part_one():
-    elf_assignment = generate_list()
-    
-    count = 0
+def part_one() -> None:
+    elf_assignment: list = generate_list()
+
+    count: int = 0
     for x in elf_assignment:
         if does_contain(x[0], x[1]):
             count += 1
@@ -38,16 +39,15 @@ def part_one():
     print(count)
 
 
-def part_two():
-    elf_assignment = generate_list()
-    count = 0
+def part_two() -> None:
+    elf_assignment: list = generate_list()
+    count: int = 0
     for x in elf_assignment:
         if any_contain(x[0], x[1]):
             count += 1
         elif any_contain(x[1], x[0]):
             count += 1
     print(count)
-    
 
 
 
