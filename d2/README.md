@@ -11,6 +11,7 @@ Task: What would your total score be if everything goes exactly according to you
 - 1pt for rock, 2 for paper, 3 for scisors  
 - 0pt for loss, 3 for tie, 6 for win  
 
+
 Example Input:
 
 ---
