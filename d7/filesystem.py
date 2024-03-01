@@ -12,9 +12,13 @@ def generate_list() -> list:
 
 
 class Directory:
+    size: int
+    contents: list
+    path: str
+
     def __init__(self, path: str) -> None:
-        self.size: int = 0
-        self.contents: list = []
+        self.size = 0
+        self.contents = []
         self.path = path
 
     def get_size(self) -> int:
@@ -40,7 +44,7 @@ class Directory:
         return self.size
 
     def find_child(self, child_path: str) -> Directory:
-        result = ""
+        result: Directory = None
         for x in self.contents:
             if x.get_path() == child_path:
                 result = x
@@ -68,8 +72,8 @@ def dir_over_value(search_base: Directory, size: int) -> list:
     return result
 
 
-def part_one():
-    terminal_output = generate_list()
+def part_one() -> Directory:
+    terminal_output: list = generate_list()
     terminal_output.pop(0)
     root: Directory = Directory("/")
     cwd: Directory = root
@@ -78,8 +82,8 @@ def part_one():
             new_cwd: str = i.replace("$ cd ", "")
             if new_cwd == "..":
                 new_cwd = cwd.get_path()
-                i = new_cwd.rfind("/", 0, -1)
-                new_cwd = new_cwd[:i+1]
+                n: int = new_cwd.rfind("/", 0, -1)
+                new_cwd = new_cwd[:n+1]
                 if new_cwd == "/":
                     cwd = root
                 else:
@@ -97,18 +101,18 @@ def part_one():
             cwd.add_child_file(int(new_file[0]))
 
     root.calc_size()
-    targets = dir_under_value(root, 100000)
+    targets: list = dir_under_value(root, 100000)
     targets = [x.get_size() for x in targets]
     print(sum(targets))
     return root
 
 
-def part_two(root: Directory):
-    size_free = 70000000 - root.get_size()
-    size_needed = 30000000 - size_free
-    targets = dir_over_value(root, size_needed)
+def part_two(root: Directory) -> None:
+    size_free: int = 70000000 - root.get_size()
+    size_needed: int = 30000000 - size_free
+    targets: list = dir_over_value(root, size_needed)
     targets = [x.get_size() for x in targets]
-    smallest_to_free = root.get_size()
+    smallest_to_free: int = root.get_size()
     for x in targets:
         if (x < smallest_to_free):
             smallest_to_free = x
