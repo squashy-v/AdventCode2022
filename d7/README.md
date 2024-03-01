@@ -42,7 +42,9 @@ $ ls
 ```
 ---
 
+
 Read from file, generating list of commands, and removed each ls command. Made a directory class that returns all its properties, can add children items, calculate its own size, and find child directories inside itself. Wrote functions to loop through the entire directory structure finding all the directories with sizes greater than or less than specific values. Calculating size, finding child directories, and finding directories bigger or smaller all use recursive calls of themselves to dig down into the directory tree. Looped through instructions and depending on the input added a new file, directory, or changed directories by going up one, or finding a directory in the current working directory. After building up the root object which holds the entire directory tree, ran calc_size on root to calculate sizes for the entire tree, and then found all directories less than 100000 and added them to list, finally summed list.
+
 
 ### Part 2
 Task: Find the smallest directory that, if deleted, would free up enough space on the filesystem to run the update. What is the total size of that directory?
