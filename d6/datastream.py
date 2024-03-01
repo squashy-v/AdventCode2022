@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 FILENAME: str = "datastream.input"
 
 def generate_datastream() -> str:
