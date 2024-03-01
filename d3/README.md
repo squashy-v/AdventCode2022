@@ -24,8 +24,8 @@ CrZsJsPPZsGzwwsLwLmpwMDw
 ```
 ---
 
-Stole list generation from previous days, made a 2d list storing each rucksack as a list containing each strings for each pocket. Looped through first pocket checking for any matching letters in second pocket, and when found return the letter to a new list. Mapped the letters from the new_list to their priority with the map and a user defined return_prio function. Summed final list of priorities.
 
+Stole list generation from previous days, made a 2d list storing each rucksack as a list containing each strings for each pocket. Looped through first pocket checking for any matching letters in second pocket, and when found return the letter to a new list. Mapped the letters from the new_list to their priority with the map and a user defined return_prio function. Summed final list of priorities.
 
 
 ### Part 2
