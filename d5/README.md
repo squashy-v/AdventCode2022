@@ -30,6 +30,7 @@ move 1 from 1 to 2
 ---
 
 Original Configuration
+---
 ```
 [N]     [Q]         [N]            
 [R]     [F] [Q]     [G] [M]        
@@ -41,9 +42,10 @@ Original Configuration
 [F] [R] [C] [F] [L] [Q] [F] [D] [P]
  1   2   3   4   5   6   7   8   9
  ```
+ ---
+
 
  Finally decided that the boiler plate OOP was worth and and made a class for manipulating the crate configuration. Instead of using a 2d array, decided to throw together a quick class (CrateStack) for FILO string storage, that also keeps track of its own length. Also made a class (CrateConfig) for storing a set number of CrateStacks with methods to abstract the CrateStacks methods for easy looping in a for loop.
-
 
 
  ### Part 2
